@@ -1,0 +1,47 @@
+.typo-t1 {
+    margin: 0;
+    font-size: rem(72px);
+    font-weight: 100;
+    line-height: rem(86px);
+    @extend %fontCanela;
+
+    @include mobile {
+        font-size: rem(62px);
+    }
+
+    @include tablet {
+        font-size: rem(100px);
+        line-height: rem(108px);
+    }
+}
+
+.typo-t2 {
+    margin: 0;
+    font-size: rem(45px);
+    font-weight: 300;
+    line-height: rem(56px);
+    @extend %fontCanela;
+
+    @include tablet {
+        font-size: rem(57px);
+        line-height: rem(68px);
+    }
+}
+
+.base-p {
+    font-size: rem(20px);
+    font-weight: 300;
+    line-height: rem(26px);
+    @extend %fontSuisseIntl;
+
+    @include tablet {
+        font-size: rem(22px);
+        line-height: rem(29px);
+
+    }
+}
+
+.base-link {
+    text-transform: uppercase;
+    @extend %fontSuisseIntl;
+}

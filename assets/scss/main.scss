@@ -1,0 +1,20 @@
+// Core
+@import "/assets/scss/core/variables";
+@import "/assets/scss/core/mixins";
+@import "/assets/scss/core/functions";
+@import "/assets/scss/core/media-queries";
+@import "/assets/scss/core/fonts";
+@import "/assets/scss/core/global";
+@import "/assets/scss/core/grid";
+@import "/assets/scss/core/typography";
+
+// Layout
+@import "/assets/scss/layout/header";
+@import "/assets/scss/layout/footer";
+
+// UI
+@import "/assets/scss/ui/nav";
+
+// Modules
+@import "/assets/scss/modules/intro";
+@import "/assets/scss/modules/projects";
