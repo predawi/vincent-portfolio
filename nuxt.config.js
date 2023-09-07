@@ -34,8 +34,11 @@ export default {
 
   styleResources: {
     scss: [
-      '~assets/scss/mixins.scss',
-      '~assets/scss/variables.scss'
+      '~assets/scss/core/_mixins.scss',
+      '~assets/scss/core/_variables.scss',
+      '~assets/scss/core/_media-queries.scss',
+      '~assets/scss/core/_fonts.scss',
+      '~assets/scss/core/_functions.scss'
     ]
   },
 

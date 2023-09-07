@@ -10,67 +10,96 @@
 
 			<!-- One tile projet -->
 			<div class="container">
-				<div class="projects__item">
-					<NuxtLink to="/projects/anoti" class="projects__link">
-						<div class="projects__infos">
-							<h3 class="projects__title">BNP Paribas</h3>
-							<span class="typo-category projects__category">SAAS COMPLIANCE</span>
-						</div>
-					</NuxtLink>
-				</div>
+				<project-card link="anoti" title="BNP Paribas" category="SAAS COMPLIANCE" />
 			</div>
-			<!-- // -->
 			
 			<!-- Three tiles projects -->
 			<div class="projects__row">
-				<div class="projects__item">
-					<NuxtLink to="/projects/anoti" class="projects__link">
-						<div class="projects__infos">
-							<h3 class="projects__title">BNP Paribas</h3>
-							<span class="typo-category projects__category">SAAS COMPLIANCE</span>
-						</div>
-					</NuxtLink>
-				</div>
-
-				<div class="projects__item">
-					<NuxtLink to="/projects/anoti" class="projects__link">
-						<div class="projects__infos">
-							<h3 class="projects__title">BNP Paribas</h3>
-							<span class="typo-category projects__category">SAAS COMPLIANCE</span>
-						</div>
-					</NuxtLink>
-				</div>
-
-				<div class="projects__item">
-					<NuxtLink to="/projects/anoti" class="projects__link">
-						<div class="projects__infos">
-							<h3 class="projects__title">BNP Paribas</h3>
-							<span class="typo-category projects__category">SAAS COMPLIANCE</span>
-						</div>
-					</NuxtLink>
-				</div>
+				<project-card link="anoti" title="BNP Paribas" category="SAAS COMPLIANCE" />
+				<project-card link="anoti" title="BNP Paribas" category="SAAS COMPLIANCE" />
+				<project-card link="anoti" title="BNP Paribas" category="SAAS COMPLIANCE" />
 			</div>
-			<!-- // -->
 
 			<!-- One tile projet -->
 			<div class="container">
-				<div class="projects__item">
-					<NuxtLink to="/projects/anoti" class="projects__link">
-						<div class="projects__infos">
-							<h3 class="projects__title">BNP Paribas</h3>
-							<span class="typo-category projects__category">SAAS COMPLIANCE</span>
-						</div>
-					</NuxtLink>
-				</div>
+				<project-card link="anoti" title="BNP Paribas" category="SAAS COMPLIANCE" />
 			</div>
-			<!-- // -->
 
 		</div>
 	</section>
 </template>
 
 <script>
+import ProjectCard from '~/components/ProjectCard.vue'
+
 export default {
-	name: 'NuxtProjects'
+	name: 'NuxtProjects',
+	components: {
+		ProjectCard,
+  	},
 }
 </script>
+
+<style lang="scss">
+.projects {
+    margin-top: rem(70px);
+    overflow: hidden;
+
+    @include tablet {
+        margin-top: rem(130px);
+    }
+
+    &__title {
+        margin-bottom: rem(50px);
+    }
+
+    &__row {
+        display: flex;
+        width: 100%;
+        overflow: scroll;
+
+        @include tablet {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .projects__card {
+            width: rem(324px);
+            flex: 0 0 rem(324px);
+            margin-left: rem(30px);
+
+            @include tablet {
+                flex: 0 1 34%;
+                margin-left: 0;
+            }
+
+            &:first-of-type {
+                margin-left: rem(25px);
+
+                @include tablet {
+                    margin-left: 0;
+                    border-right: 0;
+                }
+            }
+
+            &:last-of-type {
+                margin-right: rem(25px);
+
+                @include tablet {
+                    margin-right: 0;
+                    border-left: 0;
+                }
+            }
+        }
+    }
+
+    &__list {
+        margin-top: rem(50px);
+
+        @include tablet {
+            margin-top: rem(90px);
+        }
+    }
+}
+</style>
+

@@ -1,12 +1,10 @@
 <template>
 	<section class="reviews">
 
-		<h2 class="typo-t2 reviews__title js-reviews-title">Reviews</h2>
+		<h2 class="typo-t2 reviews__title js-reviews__title">Reviews</h2>
 
-		<div class="reviews__list">
-
-			<!-- One tile projet -->
-			<div class="container">
+		<div class="container">
+			<div class="reviews__list">
 				<review-card
 					v-for="review in reviews"
 					:key="review.author"
@@ -19,9 +17,9 @@
 				>
 				</review-card>
 			</div>
-			<!-- // -->
-
+			<div class="clear"></div>
 		</div>
+		<!-- // -->
 	</section>
 </template>
 
@@ -41,3 +39,20 @@ export default {
 	},
 }
 </script>
+<style lang="scss">
+.reviews {
+	position: relative;
+
+	&__title {
+		top: 50%;
+		position: sticky;
+		text-align: center;
+		z-index: 2;
+	}
+
+	&__list {
+		max-width: 770px;
+		margin: auto;
+	}
+}
+</style>

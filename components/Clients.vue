@@ -22,3 +22,63 @@ export default {
 	name: 'NuxtProjects'
 }
 </script>
+
+<style lang="scss">
+.clients {
+    margin-top: 112px;
+
+    @include tablet {
+        margin-top: 230px;
+    }
+
+    &__wrapper {
+        position: relative;
+        max-width: 480px;
+        margin: auto;
+    }
+
+    &__gate {
+        display: block;
+        width: 100%;
+    }
+
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+        padding: 0 rem(40px);
+
+        @include tablet {
+            padding: 0 rem(85px);
+        }
+    }
+
+    &__title {
+        margin: 0;
+        line-height: rem(74px);
+        font-size: rem(70px);
+        font-weight: 100;
+        letter-spacing: -0.04em;
+        text-align: center;
+        @extend %fontCanela;
+
+        @include tablet {
+            line-height: rem(99px);
+            font-size: rem(97px);
+        }
+    }
+
+    &__list {
+        margin: rem(30px) 0 0;
+
+        @include tablet {
+            margin: rem(47px) 0 0;
+        }
+    }
+}
+</style>

@@ -11,3 +11,27 @@
         </div>
     </section>
 </template>
+
+<style lang="scss">
+.intro {
+    margin-top: rem(30px);
+
+    @include tablet {
+        margin-top: rem(150px);
+    }
+
+    &__title {
+        @include tablet {
+            margin-bottom: rem(50px);
+        }
+    }
+
+    &__link {
+        display: inline-block;
+
+        @include tablet {
+            margin-top: rem(50px);
+        }
+    }
+}
+</style>
