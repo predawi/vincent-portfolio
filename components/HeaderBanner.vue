@@ -18,4 +18,30 @@ export default {
 	}
 };
 </script>
+
+<style lang="scss">
+.header {
+    padding: rem(30px) rem(25px);
+
+    @include tablet {
+        padding: rem(30px) rem(65px);
+    }
+
+    &__inner {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        text-transform: uppercase;
+        font-size: rem(12px);
+        font-weight: 400;
+        line-height: rem(16px);
+        letter-spacing: 0.14em;
+        @extend %fontSuisseIntl;
+    }
+}
+</style>
   

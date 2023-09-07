@@ -25,10 +25,15 @@ props: ['imgSrc', 'imgAlt', 'author', 'company', 'review', 'link'],
 .reviews {
     &__card {
         position: relative;
+        z-index: 3;
         margin-bottom: rem(30px);
         padding: rem(30px) rem(35px) rem(35px);
         border: 1px solid $textcolor;
         background: $maincolor;
+
+        &:nth-child(odd) {
+            z-index: 1;
+        }
 
         @include tablet {
             z-index: 3;
