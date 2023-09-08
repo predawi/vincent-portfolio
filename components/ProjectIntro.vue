@@ -6,7 +6,7 @@
                 <span class="project-intro__skills">{{ skills }}</span>
             </div>
 
-            <p class="typo-p project-intro__content">{{ intro }}</p>
+            <p class="typo-p project-intro__content" v-html="intro"></p>
         </div>
     </section>
 </template>

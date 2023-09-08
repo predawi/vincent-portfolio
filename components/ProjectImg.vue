@@ -2,18 +2,17 @@
     <section class="project-img" :style="[marginTop ? {'margin-top': marginTop} : '']">
         <div class="container">
 
-            <div class="project-img__wrapper">
-                <figure class="project-img__figure" :class="
-                    [alignment ? ' project-img__figure--' + alignment : ''] +
-                    [noPadding === 'true' ? ' project-img__figure--no-padding' : '']">
-                    <img 
-                        :src="imgSrc" 
-                        :alt="imgAlt"
-                        :style="imgWidth"
-                        class="project-img__picture" />
-                        <figcaption v-if="caption" class="project-img__caption">{{ caption }}</figcaption>
-                </figure>
-            </div>
+            <figure class="project-img__figure" :class="
+                [alignment ? ' project-img__figure--' + alignment : ''] +
+                [noPadding === 'true' ? ' project-img__figure--no-padding' : '']">
+
+                <img 
+                    :src="imgSrc" 
+                    :alt="imgAlt"
+                    :style="imgWidth"
+                    class="project-img__picture" />
+                    <figcaption v-if="caption" class="project-img__caption">{{ caption }}</figcaption>
+            </figure>
 
         </div>
     </section>
@@ -48,14 +47,7 @@ export default {
 <style lang="scss">
 .project-img {
     margin-top: rem(70px);
-
-    @include tablet {
-        
-    }
-
-    &__wrapper {
-        
-    }
+    overflow-x: hidden;
 
     &__figure {
         display: flex;
