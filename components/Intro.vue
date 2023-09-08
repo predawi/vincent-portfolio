@@ -18,7 +18,6 @@
 
 <style lang="scss">
 .intro {
-    position: relative;
     margin-top: rem(30px);
 
     @include tablet {

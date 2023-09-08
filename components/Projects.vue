@@ -10,7 +10,7 @@
 
 			<!-- One tile projet -->
 			<div class="container">
-				<project-card link="anoti" title="BNP Paribas" category="SAAS COMPLIANCE" />
+				<project-card link="anoti" title="Anoti" category="SAAS COMPLIANCE" />
 			</div>
 			
 			<!-- Three tiles projects -->
