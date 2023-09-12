@@ -6,15 +6,15 @@
                 <span class="project-intro__skills">{{ skills }}</span>
             </div>
 
-            <p class="typo-p project-intro__content" v-html="intro"></p>
+            <p class="typo-p project-intro__content" v-html="htmlText"></p>
         </div>
     </section>
 </template>
 
 <script>
 export default {
-name: 'project-intro',
-props: ['title', 'skills', 'intro'],
+    name: 'project-intro',
+    props: ['title', 'skills', 'htmlText'],
 }
 </script>
 
@@ -57,8 +57,8 @@ props: ['title', 'skills', 'intro'],
         margin: rem(70px) 0 0;
 
         @include tablet {
-            max-width: 800px;
-            margin: rem(70px) auto 0;
+            max-width: 584px;
+            margin: rem(70px) 0 0 rem(100px);
         }
     }
 }

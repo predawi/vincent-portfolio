@@ -15,6 +15,7 @@ import Reviews from '~/components/Reviews.vue';
 
 export default {
   name: 'IndexPage',
+  layout: 'default',
   components: {
     Intro,
     Projects,
