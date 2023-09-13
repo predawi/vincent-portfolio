@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<project-intro title="Anoti" skills="UX & UI"
+		<project-intro title="Our Time on Earth" skills="UX & UI"
 			htmlText="I collaborated with Anoti, a startup tackling corporate compliance issues, to form their visual identity, and construct their primary website with the intent to attract customers. <br>The Saas platform is the tool they offer to businesses." />
 
 		<project-img 
@@ -29,16 +29,11 @@
 
 		<project-blockquote quote="There are many ways in nature to co-operate rather than compete." author="Professor Henrietta Moore," cite=" Institute for Global Prosperity" />
 
-		<client-only>
-			<div v-if="prevPage">{{ prevPage.name }}</div>
-			<div v-if="nextPage">{{ nextPage.name }}</div>
-		</client-only>
+
 
 	</div>
 </template>
 <script>
-import projects from '../../data/project-list.json';
-
 import ProjectIntro from '~/components/ProjectIntro.vue';
 import ProjectImg from '~/components/ProjectImg.vue';
 import ProjectSubtitle from '~/components/ProjectSubtitle.vue';
@@ -47,7 +42,7 @@ import ProjectBlockquote from '~/components/ProjectBlockquote.vue';
 
 export default {
 	layout: 'project',
-	name: 'Anoti',
+	name: 'our-time-on-earth',
 	components: {
 		ProjectIntro,
 		ProjectImg,
@@ -55,45 +50,6 @@ export default {
 		ProjectParagraph,
 		ProjectBlockquote,
 	},
-	head() {
-		return {
-			title: 'Anoti'
-		}
-	},
-	data() {
-		let prevPage = this.getPrevPage();
-		let nextPage = this.getNextPage();
-
-		return {
-			prevPage, nextPage,
-		}
-	},
-	methods: {
-		getPrevPage() {
-			let index = -1;
-			let val = 'anoti';
-			let filteredObj = projects.find(function(item, i) {
-				if (item.slug === val) {
-					index = i;
-					return i;
-				}
-			});
-
-			return projects[index - 1];
-		},
-		getNextPage() {
-			let index = -1;
-			let val = 'anoti';
-			let filteredObj = projects.find(function(item, i) {
-				if (item.slug === val){
-					index = i;
-					return i;
-				}
-			});
-
-			return projects[index + 1];
-		}
-	}
 }
 </script>
   

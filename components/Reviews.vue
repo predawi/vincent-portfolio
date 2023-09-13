@@ -10,8 +10,8 @@
 		<div class="container">
 			<div class="reviews__list">
 				<review-card
-					v-for="review in reviews"
-					:key="review.author"
+					v-for="(review, index) in reviews"
+					:key="review.author + index"
 					:author="review.author"
 					:company="review.company"
 					:review="review.review"

@@ -15,7 +15,7 @@
 			
 			<!-- Three tiles projects -->
 			<div class="projects__row">
-				<project-card link="anoti" title="BNP Paribas" category="SAAS COMPLIANCE" />
+				<project-card link="our-time-on-earth" title="Our Time on Earth" category="SAAS COMPLIANCE" />
 				<project-card link="anoti" title="BNP Paribas" category="SAAS COMPLIANCE" />
 				<project-card link="anoti" title="BNP Paribas" category="SAAS COMPLIANCE" />
 			</div>
