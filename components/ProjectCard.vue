@@ -1,9 +1,9 @@
 <template>
-    <div class="projects__card">
-        <NuxtLink :to="'/projects/' + link" class="projects__link">
-            <div class="projects__infos">
-                <h3 class="projects__title">{{ title }}</h3>
-                <span v-if="category" class="typo-category projects__category">{{ category }}</span>
+    <div class="project-card">
+        <NuxtLink :to="'/projects/' + link" class="project-card__link">
+            <div class="project-card__infos">
+                <h3 class="project-card__title">{{ title }}</h3>
+                <span v-if="category" class="typo-category project-card__category">{{ category }}</span>
             </div>
         </NuxtLink>
     </div>
@@ -17,21 +17,19 @@ props: ['link', 'title', 'category'],
 </script>
 
 <style lang="scss">
-.projects {
-    &__card {
-        position: relative;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        height: rem(215px);
-        margin-top: rem(30px);
-        border: 1px solid $textcolor;
-        background: $maincolor;
+.project-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: rem(215px);
+    margin-top: rem(30px);
+    border: 1px solid $textcolor;
+    background: $maincolor;
 
-        @include tablet {
-            height: rem(300px);
-            margin-top: rem(20px);
-        }
+    @include tablet {
+        height: rem(300px);
+        margin-top: rem(20px);
     }
 
     &__link {

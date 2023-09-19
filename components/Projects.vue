@@ -1,12 +1,12 @@
 <template>
 	<section class="projects">
 		<div class="container">
-			<h2 class="typo-t2 projects__title">Latest works</h2>
+			<h2 class="typo-t2 projects-title">Latest works</h2>
 
 			<p class="typo-p">I’ve been creating digital products and experiences for more than 7 years in freelance. I had the chance to work for a lot of different industries and companies</p>
 		</div>
 
-		<div class="projects__list">
+		<div class="projects-list">
 
 			<!-- One tile projet -->
 			<div class="container">
@@ -14,7 +14,7 @@
 			</div>
 			
 			<!-- Three tiles projects -->
-			<div class="projects__row">
+			<div class="projects-row">
 				<project-card link="our-time-on-earth" title="Our Time on Earth" category="SAAS COMPLIANCE" />
 				<project-card link="anoti" title="BNP Paribas" category="SAAS COMPLIANCE" />
 				<project-card link="anoti" title="BNP Paribas" category="SAAS COMPLIANCE" />
@@ -49,11 +49,11 @@ export default {
         margin-top: rem(130px);
     }
 
-    &__title {
+    &-title {
         margin-bottom: rem(50px);
     }
 
-    &__row {
+    &-row {
         display: flex;
         width: 100%;
         overflow: scroll;
@@ -63,7 +63,7 @@ export default {
             margin: auto;
         }
 
-        .projects__card {
+        .project-card {
             width: rem(324px);
             flex: 0 0 rem(324px);
             margin-left: rem(30px);
@@ -93,7 +93,7 @@ export default {
         }
     }
 
-    &__list {
+    &-list {
         margin-top: rem(50px);
 
         @include tablet {

@@ -22,7 +22,8 @@ export default {
     padding: rem(30px) rem(25px);
 
     @include tablet {
-        padding: rem(30px) rem(65px);
+		margin-top: 0;
+        padding: rem(42px) rem(65px);
     }
 
     &__inner {

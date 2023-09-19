@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<project-intro title="Anoti" skills="UX & UI"
+		<project-intro title="Wellio" skills="UX & UI"
 			htmlText="I collaborated with Anoti, a startup tackling corporate compliance issues, to form their visual identity, and construct their primary website with the intent to attract customers. <br>The Saas platform is the tool they offer to businesses." />
 
 		<project-img 
@@ -29,6 +29,8 @@
 
 		<project-blockquote quote="There are many ways in nature to co-operate rather than compete." author="Professor Henrietta Moore," cite=" Institute for Global Prosperity" />
 
+
+
 	</div>
 </template>
 <script>
@@ -37,24 +39,17 @@ import ProjectImg from '~/components/ProjectImg.vue';
 import ProjectSubtitle from '~/components/ProjectSubtitle.vue';
 import ProjectParagraph from '~/components/ProjectParagraph.vue';
 import ProjectBlockquote from '~/components/ProjectBlockquote.vue';
-import ProjectNav from '~/components/ProjectNav.vue';
 
 export default {
 	layout: 'project',
-	name: 'Anoti',
+	name: 'wellio',
 	components: {
 		ProjectIntro,
 		ProjectImg,
 		ProjectSubtitle,
 		ProjectParagraph,
 		ProjectBlockquote,
-		ProjectNav,
 	},
-	head() {
-		return {
-			title: 'Anoti'
-		}
-	}
 }
 </script>
   
