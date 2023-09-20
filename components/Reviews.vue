@@ -57,10 +57,6 @@ export default {
 		z-index: -1;
 		left: 50%;
 		transform: translateX(-50%);
-		
-		svg {
-			max-width: 100%;
-		}
 	}
 
 	&__title {

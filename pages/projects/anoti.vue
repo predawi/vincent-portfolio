@@ -20,7 +20,7 @@
 		<p>Current economic systems en- courage the idea that nature is separate from us and is a free resource for us to exploit. Look deeper into the complex interactions of the natural world and begin to imagine a dif- ferent approach.</p>" />
 
 		<project-paragraph htmlText="<small><p>Our data from the research phase showed that the subscription process on the website was underperforming because of :</p>
-		<ul>
+		<ul type='number'>
 			<li>The lack of a responsive website</li>
 			<li>The nature of the questions asked at each step of the process</li>
 			<li>The number of steps (9)</li>
@@ -29,6 +29,7 @@
 
 		<project-blockquote quote="There are many ways in nature to co-operate rather than compete." author="Professor Henrietta Moore," cite=" Institute for Global Prosperity" />
 
+		<ProjectNav />
 	</div>
 </template>
 <script>

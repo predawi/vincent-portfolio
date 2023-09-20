@@ -1,18 +1,44 @@
 <template>
-    <div class="project-nav">
-        <NuxtLink :to="'/projects/' + link" class="project-card__link">
-            <div class="project-card__infos">
-                <h3 class="project-card__title">{{ title }}</h3>
-                <span v-if="category" class="typo-category project-card__category">{{ category }}</span>
-            </div>
-        </NuxtLink>
+    <div class="d-flex">
+        <project-nav-card :link="this.getPrevPage.slug" :title="this.getPrevPage.name" :category="this.getPrevPage.category" />
+        <project-nav-card :link="this.getNextPage.slug" :title="this.getNextPage.name" :category="this.getNextPage.category" />
     </div>
 </template>
 
 <script>
+import projects from '../data/project-list.json';
+import ProjectNavCard from '~/components/ProjectNavCard.vue';
+
 export default {
-name: 'project-nav',
-props: ['link', 'title', 'category'],
+    name: 'project-nav',
+    props: ['link', 'title', 'category'],
+    components: {
+        ProjectNavCard,
+    },
+    computed: {
+		getPrevPage() {
+			let currentIndex = this.filterCurrentSlug;
+			return projects[currentIndex - 1] ? projects[currentIndex - 1] : projects[projects.length - 1];
+		},
+
+		getNextPage() {
+			let currentIndex = this.filterCurrentSlug;
+			return projects[currentIndex + 1] ? projects[currentIndex + 1] : projects[0];
+		},
+
+		filterCurrentSlug() {
+			let currentSlug = this.$route.path.substring(this.$route.path.lastIndexOf('/') + 1);
+			let index = -1;
+			let val = currentSlug;
+			let filteredObj = projects.find(function(item, i) {
+				if (item.slug === val) {
+					index = i;
+				}
+			});
+
+			return index;
+		}
+	},
 }
 </script>
 

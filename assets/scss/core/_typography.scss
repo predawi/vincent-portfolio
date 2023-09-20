@@ -73,6 +73,10 @@ h3 {
     }
 }
 
+ul[type=number] {
+    list-style-type: decimal;
+}
+
 .typo-link {
     text-transform: uppercase;
     @extend %fontSuisseIntl;

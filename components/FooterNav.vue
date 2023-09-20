@@ -3,10 +3,10 @@
         <nav class="footer-nav__nav">
             <ul class="footer-nav__list">
                 <li class="footer-nav__list-item">
-                    <a href="#" target="_blank"><span>Malt</span></a>
+                    <a href="https://www.malt.fr/profile/vincentcharamon" target="_blank"><span>Malt</span></a>
                 </li>
                 <li class="footer-nav__list-item">
-                    <a href="#" target="_blank"><span>LinkedIn</span></a>
+                    <a href="https://www.linkedin.com/in/vincent-charamon-30008aa2/" target="_blank"><span>LinkedIn</span></a>
                 </li>
                 <li class="footer-nav__list-item">
                     <NuxtLink to="/contact">Contact</NuxtLink>

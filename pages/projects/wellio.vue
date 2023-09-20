@@ -29,8 +29,7 @@
 
 		<project-blockquote quote="There are many ways in nature to co-operate rather than compete." author="Professor Henrietta Moore," cite=" Institute for Global Prosperity" />
 
-
-
+		<ProjectNav />
 	</div>
 </template>
 <script>
@@ -39,6 +38,7 @@ import ProjectImg from '~/components/ProjectImg.vue';
 import ProjectSubtitle from '~/components/ProjectSubtitle.vue';
 import ProjectParagraph from '~/components/ProjectParagraph.vue';
 import ProjectBlockquote from '~/components/ProjectBlockquote.vue';
+import ProjectNav from '~/components/ProjectNav.vue';
 
 export default {
 	layout: 'project',
@@ -49,7 +49,13 @@ export default {
 		ProjectSubtitle,
 		ProjectParagraph,
 		ProjectBlockquote,
+		ProjectNav,
 	},
+	head() {
+		return {
+			title: 'Wellio'
+		}
+	}
 }
 </script>
   
